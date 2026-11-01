@@ -126,6 +126,10 @@ try {
     if (saved) document.documentElement.dataset.theme = saved;
 } catch (_) {}
 
+document.getElementById("term").hidden = false;
+document.getElementById("term").addEventListener("click", () => {
+    if (!getSelection().toString()) input.focus({ preventScroll: true });
+});
 document.getElementById("yr").textContent = new Date().getFullYear();
 print(`<span class="dim">Welcome. Type</span> <span class="k">help</span> <span class="dim">to get started.</span>`);
 commands.help();
