@@ -43,8 +43,20 @@ const commands = {
     ),
     links: () => print(Object.entries(DATA.links).map(([k, v]) => `<span class="k">${k.padEnd(9)}</span>${link(v)}`).join("\n")),
     contact: () => commands.links(),
+    theme: () => {
+        const root = document.documentElement;
+        const dark = root.dataset.theme
+            ? root.dataset.theme === "dark"
+            : !matchMedia("(prefers-color-scheme: light)").matches;
+        const next = dark ? "light" : "dark";
+        root.dataset.theme = next;
+        try { localStorage.setItem("theme", next); } catch (_) {}
+        print(`<span class="dim">theme: ${next}</span>`);
+    },
     clear: () => { out.innerHTML = ""; },
 };
+
+commands.theme.desc = "toggle dark/light";
 
 commands.help.desc = "list commands";
 commands.about.desc = "who I am";
@@ -69,11 +81,50 @@ function run(raw) {
     out.parentElement.scrollTop = out.parentElement.scrollHeight;
 }
 
+const history = [];
+let hpos = 0;
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+    const v = input.value.trim();
+    if (v && history[history.length - 1] !== v) history.push(v);
+    hpos = history.length;
     run(input.value);
     input.value = "";
 });
+
+input.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowUp" && history.length) {
+        e.preventDefault();
+        hpos = Math.max(0, hpos - 1);
+        input.value = history[hpos];
+    } else if (e.key === "ArrowDown") {
+        e.preventDefault();
+        hpos = Math.min(history.length, hpos + 1);
+        input.value = history[hpos] || "";
+    } else if (e.key === "Tab") {
+        e.preventDefault();
+        const hits = Object.keys(commands).filter((c) => c.startsWith(input.value.trim().toLowerCase()));
+        if (hits.length === 1) input.value = hits[0];
+    } else if (e.key === "l" && e.ctrlKey) {
+        e.preventDefault();
+        commands.clear();
+    }
+});
+
+const chips = document.getElementById("chips");
+["help", "about", "skills", "projects", "links", "theme", "clear"].forEach((c) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.textContent = c;
+    b.addEventListener("click", () => { run(c); input.focus({ preventScroll: true }); });
+    chips.appendChild(b);
+});
+
+try {
+    const saved = localStorage.getItem("theme");
+    if (saved) document.documentElement.dataset.theme = saved;
+} catch (_) {}
 
 document.getElementById("yr").textContent = new Date().getFullYear();
 print(`<span class="dim">Welcome. Type</span> <span class="k">help</span> <span class="dim">to get started.</span>`);
