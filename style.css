@@ -61,3 +61,53 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
 footer { color: var(--muted); font-size: 0.85rem; margin-top: 40px; font-family: var(--mono); }
+
+.term {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: var(--mono);
+    font-size: 0.9rem;
+}
+
+.term-bar {
+    padding: 8px 14px;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.term-body { padding: 14px; min-height: 220px; max-height: 420px; overflow-y: auto; }
+
+.out { white-space: pre-wrap; word-break: break-word; }
+.out .cmd-line { color: var(--muted); }
+.out .cmd-line b { color: var(--accent); font-weight: 400; }
+.out .res { margin: 2px 0 10px; }
+.out .k { color: var(--accent); }
+.out .dim { color: var(--muted); }
+
+.prompt { display: flex; gap: 8px; align-items: center; }
+.ps { color: var(--accent); }
+.prompt input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: var(--fg);
+    font: inherit;
+    caret-color: var(--accent);
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.chips button {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 2px 12px;
+    font: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+.chips button:hover { color: var(--accent); border-color: var(--accent); }
