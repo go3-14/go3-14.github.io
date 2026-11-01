@@ -43,7 +43,7 @@ const commands = {
     ),
     links: () => print(Object.entries(DATA.links).map(([k, v]) => `<span class="k">${k.padEnd(9)}</span>${link(v)}`).join("\n")),
     contact: () => commands.links(),
-    theme: () => {
+    theme: (silent) => {
         const root = document.documentElement;
         const dark = root.dataset.theme
             ? root.dataset.theme === "dark"
@@ -51,7 +51,7 @@ const commands = {
         const next = dark ? "light" : "dark";
         root.dataset.theme = next;
         try { localStorage.setItem("theme", next); } catch (_) {}
-        print(`<span class="dim">theme: ${next}</span>`);
+        if (silent !== true) print(`<span class="dim">theme: ${next}</span>`);
     },
     clear: () => { out.innerHTML = ""; },
 };
@@ -125,6 +125,24 @@ try {
     const saved = localStorage.getItem("theme");
     if (saved) document.documentElement.dataset.theme = saved;
 } catch (_) {}
+
+document.getElementById("theme-btn").addEventListener("click", () => commands.theme(true));
+
+const nameEl = document.getElementById("name");
+const finalName = nameEl.textContent;
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const glyphs = "!<>-_\\/[]{}=+*^?#";
+    let frame = 0;
+    const tick = setInterval(() => {
+        nameEl.textContent = [...finalName]
+            .map((ch, i) => (i < frame / 2 ? ch : glyphs[Math.floor(Math.random() * glyphs.length)]))
+            .join("");
+        if (++frame > finalName.length * 2) {
+            clearInterval(tick);
+            nameEl.textContent = finalName;
+        }
+    }, 40);
+}
 
 document.getElementById("term").hidden = false;
 document.getElementById("term").addEventListener("click", () => {
