@@ -135,13 +135,13 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
     let frame = 0;
     const tick = setInterval(() => {
         nameEl.textContent = [...finalName]
-            .map((ch, i) => (i < frame / 2 ? ch : glyphs[Math.floor(Math.random() * glyphs.length)]))
+            .map((ch, i) => (i < frame / 3 ? ch : glyphs[Math.floor(Math.random() * glyphs.length)]))
             .join("");
-        if (++frame > finalName.length * 2) {
+        if (++frame > finalName.length * 3) {
             clearInterval(tick);
             nameEl.textContent = finalName;
         }
-    }, 40);
+    }, 75);
 }
 
 document.getElementById("term").hidden = false;
