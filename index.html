@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&family=Geist+Mono:wght@400;500&display=swap">
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
     <main id="top">
@@ -33,11 +33,37 @@
         </blockquote>
 
         <h2>projects</h2>
-        <!-- TODO: replace these placeholders with your real projects -->
-        <ul>
-            <li><a href="https://github.com/go3-14" target="_blank" rel="noopener">project-one</a> <span class="dim">- short description of what it does</span></li>
-            <li><a href="https://github.com/go3-14" target="_blank" rel="noopener">project-two</a> <span class="dim">- short description of what it does</span></li>
-            <li><a href="https://github.com/go3-14" target="_blank" rel="noopener">project-three</a> <span class="dim">- short description of what it does</span></li>
+        <ul class="projects">
+            <li>
+                <a href="https://github.com/go3-14/DSFS" target="_blank" rel="noopener">VoidShare</a>
+                <span class="dim">- anonymous end-to-end encrypted file transfer. Client-side AES-256-GCM chunked encryption, a 3-node distributed chunk store with replication and failover, single-use downloads.</span>
+                <span class="stack">TypeScript, Fastify, React, SQLite</span>
+            </li>
+            <li>
+                <a href="https://github.com/go3-14/webv" target="_blank" rel="noopener">webv</a>
+                <span class="dim">- command-line web vulnerability scanner with fast, normal and deep modes. Crawls endpoints, tests XSS and SQL injection payloads, runs Nmap and Nikto, and writes an HTML report with severity and fix suggestions.</span>
+                <span class="stack">Python, BeautifulSoup, Nmap, Nikto</span>
+            </li>
+            <li>
+                <a href="https://gymbel.vercel.app/" target="_blank" rel="noopener">GymApp2</a>
+                <span class="dim">- fitness and nutrition tracker built by a team of 4. I built the REST backend: exercise catalog, workout session logging, and nutrition tracking.</span>
+                <span class="stack">FastAPI, Python, Firebase, React Native</span>
+            </li>
+            <li>
+                <a href="https://github.com/go3-14/ulpf" target="_blank" rel="noopener">ULPF</a>
+                <span class="dim">- universal log pre-processing framework for SIH 2026. Ingests Syslog, CEF, LEEF and JSON logs from network devices and normalises them to the OCSF Network Activity schema.</span>
+                <span class="stack">Python</span>
+            </li>
+            <li>
+                <a href="https://github.com/go3-14/secure_vote" target="_blank" rel="noopener">Secure Electoral Roll</a>
+                <span class="dim">- blockchain-based, tamper-proof and auditable voter list. Voters are stored as hashes and changes need multi-authority approval, with no personal data on-chain.</span>
+                <span class="stack">JavaScript, blockchain</span>
+            </li>
+            <li>
+                <a href="https://github.com/go3-14/pptx_viewer_extension" target="_blank" rel="noopener">PPTX Viewer</a>
+                <span class="dim">- Chrome/Edge extension that opens .pptx downloads in an in-browser viewer. Fully client-side, files are never uploaded.</span>
+                <span class="stack">JavaScript, Manifest V3</span>
+            </li>
         </ul>
 
         <h2>skills</h2>
@@ -56,6 +82,6 @@
     </main>
 
     <footer>&copy; <span id="yr">2026</span> Gopikrishna</footer>
-    <script src="script.js?v=7"></script>
+    <script src="script.js?v=8"></script>
 </body>
 </html>
