@@ -33,13 +33,26 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; border-radius: 3px; }
 
 .banner {
-    display: grid;
-    place-items: center;
-    padding: 56px 16px;
-    border: 3px solid var(--rule);
-    border-radius: 4px;
-    background: #120e0b;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--bg);
 }
+
+.bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 12px;
+    color: var(--muted);
+}
+.dots { display: flex; gap: 6px; }
+.dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--rule); }
+.title { position: absolute; left: 50%; transform: translateX(-50%); }
+
+.screen { display: grid; place-items: center; padding: 40px 16px; }
 
 .ascii {
     margin: 0;
