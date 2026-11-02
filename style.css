@@ -1,10 +1,10 @@
 :root {
-    --bg: #0b1020;
+    --bg: #0a0a0a;
     --fg: #e2e8f0;
     --muted: #94a3b8;
     --accent: #38bdf8;
-    --line: #1e293b;
-    --panel: #0f172a;
+    --line: #1f1f1f;
+    --panel: #111111;
     --mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, Menlo, monospace;
     --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
@@ -37,15 +37,6 @@ body {
     color: var(--fg);
     font-family: var(--sans);
     line-height: 1.6;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background: radial-gradient(600px circle at 50% 18%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%);
-    pointer-events: none;
 }
 
 .nav {
@@ -101,7 +92,6 @@ main { max-width: 720px; margin: 0 auto; padding: 0 20px 48px; }
     color: #fff;
     background: linear-gradient(135deg, var(--accent), #6366f1);
     border: 2px solid var(--line);
-    box-shadow: 0 0 60px color-mix(in srgb, var(--accent) 30%, transparent);
 }
 
 h1 {
