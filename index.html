@@ -8,12 +8,12 @@
     <meta property="og:title" content="Gopikrishna | go3-14">
     <meta property="og:description" content="Cybersecurity student. Building things. Learning deeply.">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#0a1018">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+    <meta name="theme-color" content="#100c09">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
-    <link rel="stylesheet" href="style.css?v=9">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&family=Geist+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
     <main id="top">
@@ -26,68 +26,72 @@
  \__, | \___/ |____/        |_|   |_|
  |___/</pre>
         </div>
-        <p class="tagline">Cybersecurity student exploring systems, security and development. Building things. Learning deeply.</p>
+
+        <h2>about</h2>
+        <blockquote>
+            <p>Cybersecurity student exploring systems, security and development.<br>Building things. Learning deeply.</p>
+        </blockquote>
 
         <h2>projects</h2>
-        <ul class="grid">
-            <li class="card">
-                <a class="card-title" href="https://github.com/go3-14/DSFS" target="_blank" rel="noopener">VoidShare</a>
-                <p>Anonymous end-to-end encrypted file transfer. Client-side AES-256-GCM chunked encryption, a 3-node distributed chunk store with replication and failover, single-use downloads.</p>
-                <div class="tags"><span>TypeScript</span><span>Fastify</span><span>React</span><span>SQLite</span></div>
+        <ul class="projects">
+            <li>
+                <a href="https://github.com/go3-14/DSFS" target="_blank" rel="noopener">VoidShare</a>
+                <span class="dim">- anonymous end-to-end encrypted file transfer. Client-side AES-256-GCM chunked encryption, a 3-node distributed chunk store with replication and failover, single-use downloads.</span>
+                <span class="stack">TypeScript, Fastify, React, SQLite</span>
             </li>
-            <li class="card">
-                <a class="card-title" href="https://github.com/go3-14/webv" target="_blank" rel="noopener">webv</a>
-                <p>Command-line web vulnerability scanner with fast, normal and deep modes. Crawls endpoints, tests XSS and SQL injection payloads, runs Nmap and Nikto, and writes an HTML report with severity and fix suggestions.</p>
-                <div class="tags"><span>Python</span><span>BeautifulSoup</span><span>Nmap</span><span>Nikto</span></div>
+            <li>
+                <a href="https://github.com/go3-14/webv" target="_blank" rel="noopener">webv</a>
+                <span class="dim">- command-line web vulnerability scanner with fast, normal and deep modes. Crawls endpoints, tests XSS and SQL injection payloads, runs Nmap and Nikto, and writes an HTML report with severity and fix suggestions.</span>
+                <span class="stack">Python, BeautifulSoup, Nmap, Nikto</span>
             </li>
-            <li class="card">
-                <a class="card-title" href="https://github.com/go3-14/phishtrace" target="_blank" rel="noopener">PhishTrace</a>
-                <p>Reproducible DFIR lab for investigating phishing campaigns purely from raw network, email, web proxy and endpoint artifacts, with no live malicious infrastructure.</p>
-                <div class="tags"><span>Python</span><span>DFIR</span></div>
+            <li>
+                <a href="https://github.com/go3-14/phishtrace" target="_blank" rel="noopener">PhishTrace</a>
+                <span class="dim">- reproducible DFIR lab for investigating phishing campaigns purely from raw network, email, web proxy and endpoint artifacts, with no live malicious infrastructure.</span>
+                <span class="stack">Python, DFIR</span>
             </li>
-            <li class="card">
-                <a class="card-title" href="https://phakeit.vercel.app" target="_blank" rel="noopener">phakeit</a>
-                <p>Paint your GitHub contribution graph on a heatmap and it creates the backdated commits for you. A hobby project to experiment with the GitHub API.</p>
-                <div class="tags"><span>Next.js</span><span>TypeScript</span><span>Tailwind</span></div>
+            <li>
+                <a href="https://phakeit.vercel.app" target="_blank" rel="noopener">phakeit</a>
+                <span class="dim">- paint your GitHub contribution graph on a heatmap and it creates the backdated commits for you. A hobby project to experiment with the GitHub API.</span>
+                <span class="stack">Next.js, TypeScript, Tailwind</span>
             </li>
-            <li class="card">
-                <a class="card-title" href="https://gymbel.vercel.app/" target="_blank" rel="noopener">Gymbel</a>
-                <p>Fitness and nutrition tracker built by a team of 4. I built the REST backend: exercise catalog, workout session logging, and nutrition tracking.</p>
-                <div class="tags"><span>FastAPI</span><span>Python</span><span>Firebase</span><span>React Native</span></div>
+            <li>
+                <a href="https://gymbel.vercel.app/" target="_blank" rel="noopener">Gymbel</a>
+                <span class="dim">- fitness and nutrition tracker built by a team of 4. I built the REST backend: exercise catalog, workout session logging, and nutrition tracking.</span>
+                <span class="stack">FastAPI, Python, Firebase, React Native</span>
             </li>
-            <li class="card">
-                <a class="card-title" href="https://github.com/go3-14/ulpf" target="_blank" rel="noopener">ULPF</a>
-                <p>Universal log pre-processing framework for SIH 2026. Ingests Syslog, CEF, LEEF and JSON logs from network devices and normalises them to the OCSF Network Activity schema.</p>
-                <div class="tags"><span>Python</span></div>
+            <li>
+                <a href="https://github.com/go3-14/ulpf" target="_blank" rel="noopener">ULPF</a>
+                <span class="dim">- universal log pre-processing framework for SIH 2026. Ingests Syslog, CEF, LEEF and JSON logs from network devices and normalises them to the OCSF Network Activity schema.</span>
+                <span class="stack">Python</span>
             </li>
-            <li class="card">
-                <a class="card-title" href="https://github.com/go3-14/secure_vote" target="_blank" rel="noopener">Secure Electoral Roll</a>
-                <p>Blockchain-based, tamper-proof and auditable voter list. Voters are stored as hashes and changes need multi-authority approval, with no personal data on-chain.</p>
-                <div class="tags"><span>JavaScript</span><span>Blockchain</span></div>
+            <li>
+                <a href="https://github.com/go3-14/secure_vote" target="_blank" rel="noopener">Secure Electoral Roll</a>
+                <span class="dim">- blockchain-based, tamper-proof and auditable voter list. Voters are stored as hashes and changes need multi-authority approval, with no personal data on-chain.</span>
+                <span class="stack">JavaScript, blockchain</span>
             </li>
-            <li class="card">
-                <a class="card-title" href="https://github.com/go3-14/pptx_viewer_extension" target="_blank" rel="noopener">PPTX Viewer</a>
-                <p>Chrome/Edge extension that opens .pptx downloads in an in-browser viewer. Fully client-side, files are never uploaded.</p>
-                <div class="tags"><span>JavaScript</span><span>Manifest V3</span></div>
+            <li>
+                <a href="https://github.com/go3-14/pptx_viewer_extension" target="_blank" rel="noopener">PPTX Viewer</a>
+                <span class="dim">- Chrome/Edge extension that opens .pptx downloads in an in-browser viewer. Fully client-side, files are never uploaded.</span>
+                <span class="stack">JavaScript, Manifest V3</span>
             </li>
         </ul>
 
         <h2>skills</h2>
         <!-- TODO: list your real skills -->
-        <div class="chips"><span>Linux</span><span>Python</span><span>Networking</span><span>Web security</span><span>Git</span></div>
+        <p>Linux, Python, networking, web security, git</p>
 
         <h2>links</h2>
-        <div class="pills">
-            <a href="https://github.com/go3-14" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/gopikrishna-gopakumaran-558706375/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="mailto:gkgopi.dev@gmail.com">Email</a>
-            <a href="https://t.me/go4_14" target="_blank" rel="noopener">Telegram</a>
+        <ul>
+            <li><a href="https://github.com/go3-14" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/gopikrishna-gopakumaran-558706375/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:gkgopi.dev@gmail.com">Email</a></li>
+            <li><a href="https://t.me/go4_14" target="_blank" rel="noopener">Telegram</a></li>
             <!-- TODO: add resume.pdf to the repo, or delete this line -->
-            <a class="primary" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
-        </div>
+            <li><a href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
     </main>
 
     <footer>&copy; <span id="yr">2026</span> Gopikrishna</footer>
-    <script src="script.js?v=9"></script>
+    <script src="script.js?v=10"></script>
 </body>
 </html>
