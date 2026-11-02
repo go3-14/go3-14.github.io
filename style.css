@@ -64,3 +64,13 @@ h1 {
 .social svg.fill { fill: currentColor; stroke: none; }
 
 footer { color: var(--muted); font-size: 0.85rem; padding: 0 24px 32px; text-align: center; }
+
+.ascii {
+    margin: 0;
+    font: 500 1.1rem/1.15 var(--mono);
+    color: var(--muted);
+    text-align: left;
+    white-space: pre;
+}
+
+.avatar { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); }
