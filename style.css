@@ -1,10 +1,10 @@
 :root {
-    --bg: #07060f;
-    --panel: #0b0a16;
-    --fg: #c9c3f0;
-    --muted: #7d77a8;
-    --purple: #7c4dff;
-    --rule: #2a1f6b;
+    --bg: #100c09;
+    --panel: #16110d;
+    --fg: #eadfd3;
+    --muted: #9b8a7a;
+    --purple: #c8955f;
+    --rule: #3d2d20;
     --sans: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
     --mono: "Geist Mono", ui-monospace, Consolas, monospace;
 }
@@ -38,7 +38,7 @@ a:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; border-
     padding: 56px 16px;
     border: 3px solid var(--rule);
     border-radius: 4px;
-    background: #0a0916;
+    background: #120e0b;
 }
 
 .ascii {
