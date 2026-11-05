@@ -1,6 +1,6 @@
 document.getElementById("yr").textContent = new Date().getFullYear();
 
-// Always plays, for everyone: one column revealed every 75ms (~3s). Ignores reduced-motion on purpose.
+// Always plays, for everyone: one column revealed every 50ms (~2s). Ignores reduced-motion on purpose.
 const art = document.getElementById("art");
 const finalArt = art.textContent;
 const glyphs = "!<>-_\\/[]{}=+*^?#";
@@ -18,4 +18,4 @@ const tick = setInterval(() => {
         clearInterval(tick);
         art.textContent = finalArt;
     }
-}, 75);
+}, 50);
